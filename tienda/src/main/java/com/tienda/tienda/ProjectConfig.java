@@ -37,7 +37,7 @@ public class ProjectConfig implements WebMvcConfigurer {
         resolver.setCheckExistence(true);
         return resolver;
     }
-
+     //Horario y localizacion de la maquina
     @Bean
     public LocaleResolver localeResolver() {
         var slr = new SessionLocaleResolver();
@@ -46,7 +46,8 @@ public class ProjectConfig implements WebMvcConfigurer {
         slr.setTimeZoneAttributeName("session.current.timezone");
         return slr;
     }
-
+    
+    //Idioma de la maquina
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
         var lci = new LocaleChangeInterceptor();
