@@ -58,4 +58,11 @@ public class ConsultaController {
         model.addAttribute("precioSup", precioSup);
         return "/consultas/listado";
     }
+    
+    @PostMapping("/consultaPractica2")
+    public String consultaDerivada(Model model) {
+        var productos = productoService.consultaPractica2();
+        model.addAttribute("productos", productos);
+        return "/consultas/listado";
+    }
 }
